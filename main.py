@@ -84,23 +84,23 @@ if __name__ == '__main__':
     len_CNvocabulary = len(CN_glossary)
     len_ENvocabulary = len(EN_glossary)
 
-    # 数据集2
-    sentences1 = [
-        ['我 有 一 个 好 朋 友 P', 'S I have a good friend .', 'I have a good friend . E'],
-        ['我 有 零 个 女 朋 友 P', 'S I have zero girl friend .', 'I have zero girl friend . E'],
-        ['我 有 一 个 男 朋 友 P', 'S I have a boy friend .', 'I have a boy friend . E']
-    ]  
-    test_sentence1 = [
-        ['我 有 零 个 男 朋 友 P', '', '']
-    ]
-    CN_glossary1 = {'P': 0, '我': 1, '有': 2, '一': 3, '个': 4, '好': 5, '朋': 6, '友': 7, '零': 8, '女': 9, '男': 10}
-    CN_idx2word1 = {i: w for i, w in enumerate(CN_glossary1)}
+    # # 数据集2
+    # sentences1 = [
+    #     ['我 有 一 个 好 朋 友 P', 'S I have a good friend .', 'I have a good friend . E'],
+    #     ['我 有 零 个 女 朋 友 P', 'S I have zero girl friend .', 'I have zero girl friend . E'],
+    #     ['我 有 一 个 男 朋 友 P', 'S I have a boy friend .', 'I have a boy friend . E']
+    # ]  
+    # test_sentence1 = [
+    #     ['我 有 零 个 男 朋 友 P', '', '']
+    # ]
+    # CN_glossary1 = {'P': 0, '我': 1, '有': 2, '一': 3, '个': 4, '好': 5, '朋': 6, '友': 7, '零': 8, '女': 9, '男': 10}
+    # CN_idx2word1 = {i: w for i, w in enumerate(CN_glossary1)}
 
-    EN_glossary1 = {'P': 0, 'I': 1, 'have': 2, 'a': 3, 'good': 4,
-                    'friend': 5, 'zero': 6, 'girl': 7,  'boy': 8, 'S': 9, 'E': 10, '.': 11}
-    EN_idx2word1 = {i: w for i, w in enumerate(EN_glossary1)}
-    len_CNvocabulary1 = len(CN_glossary1)
-    len_ENvocabulary1 = len(EN_glossary1)
+    # EN_glossary1 = {'P': 0, 'I': 1, 'have': 2, 'a': 3, 'good': 4,
+    #                 'friend': 5, 'zero': 6, 'girl': 7,  'boy': 8, 'S': 9, 'E': 10, '.': 11}
+    # EN_idx2word1 = {i: w for i, w in enumerate(EN_glossary1)}
+    # len_CNvocabulary1 = len(CN_glossary1)
+    # len_ENvocabulary1 = len(EN_glossary1)
     
     # 定义trainset以及trainloader
     encoder_input, decoder_input, target = make_data(sentences, CN_glossary, EN_glossary)
